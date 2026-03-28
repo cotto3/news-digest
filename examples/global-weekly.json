@@ -1,0 +1,136 @@
+{
+  "title": "Global News Weekly Roundup",
+  "date_range": "March 21–28, 2026",
+  "subject": "Global News Weekly Roundup — Week of 2026-03-28",
+  "summary": [
+    "Iran war entered its second month with escalating strikes and counterstrikes across the Middle East",
+    "Oil surged past $110/barrel after Iran closed Strait of Hormuz to container ships",
+    "Colombian military plane crash killed 66; extreme weather hit Kenya and Tanzania",
+    "Markets tumbled for fifth straight week as energy disruptions rippled through global economy"
+  ],
+  "stories": [
+    {
+      "section": "Middle East & Africa",
+      "headline": "Iran War Enters Second Month as Strikes Escalate",
+      "bullets": [
+        "US extended deadline for Iran to reopen Strait of Hormuz to April 6; Brent crude hit $110/barrel",
+        "Israeli Air Force struck uranium processing facility in Yazd and heavy water reactor at Khondab",
+        "10 US troops injured in Iranian strike on Prince Sultan Air Base in Saudi Arabia",
+        "G7 foreign ministers agreed to protect Strait of Hormuz passage if war ends"
+      ],
+      "sources": [
+        {"name": "BBC", "url": "https://www.bbc.com/news/world"},
+        {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"},
+        {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"}
+      ],
+      "framing_watch": "RT emphasizes US aggression and civilian casualties; BBC and DW focus on diplomatic efforts and military operations"
+    },
+    {
+      "section": "Middle East & Africa",
+      "headline": "Kenya Flash Floods Kill 84; Tanzania Landslides Kill 20",
+      "bullets": [
+        "At least 84 killed in flash floods across Kenya; 20 killed in landslides in Tanzania's Mbeya Region",
+        "Somalia faces acute food insecurity with 6.5 million affected as drought and conflict worsen"
+      ],
+      "sources": [
+        {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"},
+        {"name": "Africanews", "url": "https://www.africanews.com/"}
+      ]
+    },
+    {
+      "section": "Americas",
+      "headline": "Colombian Military Plane Crash Kills 66",
+      "bullets": [
+        "C-130 transport plane crashed in Puerto Leguízamo, killing at least 66 of 125 aboard",
+        "One of the deadliest military aviation disasters in Latin America in recent years"
+      ],
+      "sources": [
+        {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"},
+        {"name": "CNN", "url": "https://www.cnn.com/world/americas"}
+      ]
+    },
+    {
+      "section": "Americas",
+      "headline": "US Government Shutdown Drags On",
+      "bullets": [
+        "House Republicans rejected Senate deal to fund DHS; TSA staffing shortages causing extended airport lines",
+        "Senators recessed for two weeks with no end in sight"
+      ],
+      "sources": [
+        {"name": "BBC", "url": "https://www.bbc.com/news/world"},
+        {"name": "CNN", "url": "https://www.cnn.com/us"},
+        {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"}
+      ]
+    },
+    {
+      "section": "Europe",
+      "headline": "EU Braces for Energy Crisis as Iran War Hits Economy",
+      "bullets": [
+        "European Commission urged EU countries to start gas filling season early",
+        "Eurogroup warned conflict effects now passing through to real economy",
+        "Germany's Chancellor Merz questioned coal reform timeline given energy instability"
+      ],
+      "sources": [
+        {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"},
+        {"name": "EU Commission", "url": "https://energy.ec.europa.eu/"}
+      ]
+    },
+    {
+      "section": "Europe",
+      "headline": "Sarah Mullally Becomes First Female Archbishop of Canterbury",
+      "bullets": [
+        "Enthroned on March 27, succeeding Justin Welby who resigned over safeguarding failures"
+      ],
+      "sources": [
+        {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"},
+        {"name": "BBC", "url": "https://www.bbc.com/news/world"}
+      ]
+    },
+    {
+      "section": "Asia-Pacific",
+      "headline": "Nepal Gets New PM as Former Leader Arrested",
+      "bullets": [
+        "Rapper-turned-politician Balendra Shah sworn in as PM after landslide election victory",
+        "Former PM KP Sharma Oli arrested over deadly crackdown that killed 70+ protesters"
+      ],
+      "sources": [
+        {"name": "BBC", "url": "https://www.bbc.com/news/world"},
+        {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"},
+        {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"}
+      ]
+    },
+    {
+      "section": "Economy & Markets",
+      "headline": "Markets Tumble as Oil Crisis Deepens",
+      "bullets": [
+        "Dow fell ~800 points, entering correction; S&P 500 posted fifth straight losing week",
+        "OECD warned Middle East conflict is 'testing resilience of global economy'",
+        "Bank of England and Federal Reserve both held rates steady, citing energy-driven inflation"
+      ],
+      "sources": [
+        {"name": "CNBC", "url": "https://www.cnbc.com/world-economy/"},
+        {"name": "OECD", "url": "https://www.oecd.org/"},
+        {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"}
+      ]
+    },
+    {
+      "section": "Science & Technology",
+      "headline": "AI Deepfake X-Rays Fool Doctors; Grain-of-Salt Neural Implant",
+      "bullets": [
+        "AI-generated fake X-rays now convincing enough to fool radiologists",
+        "New neural implant small enough to rest on a grain of salt can wirelessly transmit brain activity for over a year",
+        "Australian scientists demonstrated a prototype quantum battery"
+      ],
+      "sources": [
+        {"name": "SciTechDaily", "url": "https://scitechdaily.com/"},
+        {"name": "ScienceDaily", "url": "https://www.sciencedaily.com/"}
+      ]
+    }
+  ],
+  "what_to_watch": [
+    "Iran's April 6 Strait of Hormuz deadline — will Trump extend again or escalate?",
+    "US DHS shutdown with senators on recess for two weeks",
+    "Oil price trajectory as IEA considers further strategic reserve releases"
+  ],
+  "sources_consulted": "Wikipedia Current Events, BBC, DW, Al Jazeera, SCMP, CNN, NPR, CNBC, OECD, Africanews, SciTechDaily, and web search results"
+}
