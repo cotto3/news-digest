@@ -1,15 +1,31 @@
 <html>
-<body style="font-family:system-ui,-apple-system,sans-serif;max-width:600px;margin:0 auto;padding:16px;color:#222;line-height:1.5">
-<h1 style="font-size:22px;margin-bottom:4px">$title</h1>
-<p style="font-size:13px;color:#999;margin-top:0">$date_range</p>
+<body style="margin:0;padding:0;background:#f4f4f4;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#1a1a1a;line-height:1.6">
+<div style="max-width:620px;margin:0 auto;background:#ffffff">
 
-$summary
+<!-- Masthead -->
+<div style="background:#1a1a1a;padding:24px 28px 20px">
+  <h1 style="margin:0;font-size:22px;font-weight:700;color:#ffffff;letter-spacing:-0.3px">$title</h1>
+  <p style="margin:6px 0 0;font-size:13px;color:#999;font-weight:400">$date_range</p>
+</div>
 
-$stories
+<!-- Summary -->
+<div style="margin:0;padding:20px 28px;background:#f8f9fa;border-bottom:1px solid #e8e8e8">
+  <p style="margin:0 0 8px;font-size:11px;text-transform:uppercase;letter-spacing:0.8px;color:#888;font-weight:600">At a Glance</p>
+  $summary
+</div>
+
+<!-- Stories -->
+<div style="padding:8px 28px 16px">
+  $stories
+</div>
 
 $extra_sections
 
-<hr style="border:none;border-top:1px solid #eee;margin:24px 0 12px">
-<p style="font-size:12px;color:#999"><strong>Sources consulted:</strong> $sources_consulted</p>
+<!-- Footer -->
+<div style="padding:20px 28px;border-top:1px solid #e8e8e8;background:#fafafa">
+  <p style="margin:0;font-size:12px;color:#999;line-height:1.5"><strong style="color:#777">Sources consulted:</strong> $sources_consulted</p>
+</div>
+
+</div>
 </body>
 </html>

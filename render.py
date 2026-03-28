@@ -23,33 +23,58 @@ def render_stories(stories: list[dict]) -> str:
     for story in stories:
         section = story.get("section", "")
         if section != current_section:
+            if current_section is not None:
+                html += '<div style="height:8px"></div>\n'
             current_section = section
-            html += f'<h2 style="font-size:18px;border-bottom:1px solid #ddd;padding-bottom:4px">{section}</h2>\n'
-
-        html += f'<h3 style="font-size:15px;margin-bottom:4px">{story["headline"]}</h3>\n'
-        html += '<ul style="margin-top:4px">\n'
-        for point in story.get("bullets", []):
-            html += f"<li>{point}</li>\n"
-        html += "</ul>\n"
-
-        sources = story.get("sources", [])
-        if sources:
-            links = " | ".join(
-                f'<a href="{s["url"]}">{s["name"]}</a>' for s in sources
+            html += (
+                f'<h2 style="margin:28px 0 16px;padding:0 0 0 12px;font-size:13px;'
+                f'text-transform:uppercase;letter-spacing:0.8px;color:#888;'
+                f'font-weight:600;border-left:3px solid #1a1a1a">{section}</h2>\n'
             )
-            html += f'<p style="font-size:13px;color:#666">Sources: {links}</p>\n'
+
+        html += (
+            f'<div style="margin:0 0 20px;padding:16px 16px 12px;'
+            f'border:1px solid #eee;border-radius:6px">\n'
+        )
+        html += (
+            f'<h3 style="margin:0 0 10px;font-size:16px;font-weight:600;'
+            f'line-height:1.3;color:#1a1a1a">{story["headline"]}</h3>\n'
+        )
+        html += '<ul style="margin:0 0 10px;padding-left:20px;color:#333">\n'
+        for point in story.get("bullets", []):
+            html += f'<li style="margin-bottom:4px;font-size:14px">{point}</li>\n'
+        html += "</ul>\n"
 
         framing = story.get("framing_watch")
         if framing:
-            html += f'<div style="background:#fffde7;padding:8px;margin:8px 0;font-size:13px"><strong>Framing Watch:</strong> {framing}</div>\n'
+            html += (
+                f'<div style="background:#fef9e7;padding:10px 12px;margin:0 0 10px;'
+                f'font-size:13px;border-radius:4px;border-left:3px solid #f0c040;'
+                f'color:#5a4e1a;line-height:1.4">'
+                f'<strong>Framing Watch:</strong> {framing}</div>\n'
+            )
+
+        sources = story.get("sources", [])
+        if sources:
+            links = " &middot; ".join(
+                f'<a href="{s["url"]}" style="color:#666;text-decoration:none;'
+                f'border-bottom:1px solid #ddd">{s["name"]}</a>'
+                for s in sources
+            )
+            html += f'<p style="margin:0;font-size:12px;color:#999">{links}</p>\n'
+
+        html += "</div>\n"
 
     return html
 
 
 def render_summary(summary: list[str]) -> str:
-    html = '<ul style="margin-top:4px">\n'
+    html = '<ul style="margin:0;padding-left:20px;color:#333">\n'
     for point in summary:
-        html += f"<li>{point}</li>\n"
+        html += (
+            f'<li style="margin-bottom:6px;font-size:14px;'
+            f'line-height:1.5">{point}</li>\n'
+        )
     html += "</ul>\n"
     return html
 
@@ -61,11 +86,19 @@ def render_extra_sections(data: dict) -> str:
         if not section:
             continue
         title = "This Week in NYC" if key == "this_week" else "What to Watch"
-        html += f'<h2 style="font-size:18px;border-bottom:1px solid #ddd;padding-bottom:4px">{title}</h2>\n'
-        html += '<ul style="margin-top:4px">\n'
+        html += (
+            f'<div style="margin:0;padding:16px 28px 20px;'
+            f'background:#f8f9fa;border-top:1px solid #e8e8e8">\n'
+            f'<p style="margin:0 0 10px;font-size:13px;text-transform:uppercase;'
+            f'letter-spacing:0.8px;color:#888;font-weight:600">{title}</p>\n'
+            f'<ul style="margin:0;padding-left:20px;color:#333">\n'
+        )
         for item in section:
-            html += f"<li>{item}</li>\n"
-        html += "</ul>\n"
+            html += (
+                f'<li style="margin-bottom:6px;font-size:14px;'
+                f'line-height:1.5">{item}</li>\n'
+            )
+        html += "</ul>\n</div>\n"
     return html
 
 
