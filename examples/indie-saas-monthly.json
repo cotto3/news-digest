@@ -1,0 +1,80 @@
+{
+  "title": "Indie SaaS Monthly",
+  "date_range": "March 2026",
+  "subject": "Indie SaaS Monthly — March 2026",
+  "summary": [
+    "Solo founder sold AI-built product Base44 to Wix for $80M; built with no team and no funding",
+    "Y Combinator reported average time-to-MVP decreased 60% vs 2022 for AI-native startups",
+    "Spec-first development (writing requirements before letting agents code) emerging as the dominant build pattern"
+  ],
+  "stories": [
+    {
+      "section": "Factory Flows",
+      "headline": "How Solo Founders Are Shipping MVPs in Weeks",
+      "bullets": [
+        "Standard AI-first flow: idea validation via LLM research, spec writing, agent-driven development, automated testing, deploy to Vercel",
+        "Founders using Claude Code + Cursor combo: Cursor for daily edits, Claude Code for architecture and multi-file scaffolding",
+        "Bolt.new and Lovable gaining traction for generating full-stack prototypes from prompts in under an hour"
+      ],
+      "sources": [
+        {"name": "Indie Hackers", "url": "https://www.indiehackers.com/"},
+        {"name": "Latent Space", "url": "https://www.latent.space/"}
+      ]
+    },
+    {
+      "section": "Factory Flows",
+      "headline": "Spec-First Development: The Emerging Pattern",
+      "bullets": [
+        "Top builders write detailed requirements and architecture docs (CLAUDE.md, specs) before touching code",
+        "Amazon's Kiro IDE formalizes this: generates requirements, design specs, and task breakdowns as a first step",
+        "Pattern works because agents perform dramatically better with clear constraints and context"
+      ],
+      "sources": [
+        {"name": "Kiro", "url": "https://kiro.dev/"},
+        {"name": "Anthropic", "url": "https://www.anthropic.com/engineering"}
+      ]
+    },
+    {
+      "section": "Launches",
+      "headline": "Base44: $0 to $80M Acquisition, Built Solo with AI",
+      "bullets": [
+        "Maor Shlomo built Base44 (no-code platform) entirely solo using AI coding tools",
+        "Reached 250K users before Wix acquired it for $80M cash",
+        "No funding, no team, no traditional marketing; product-led growth only"
+      ],
+      "sources": [
+        {"name": "TechCrunch", "url": "https://techcrunch.com/"}
+      ]
+    },
+    {
+      "section": "Launches",
+      "headline": "HeadshotPro: $300K/Month as a One-Person Operation",
+      "bullets": [
+        "Danny Postma running HeadshotPro solo at $300K MRR using AI for product development and operations",
+        "Sarah Chen launched AI design agency, hit $420K ARR within 8 months",
+        "Operating margins of 60-80% vs 10-20% for traditionally staffed SaaS businesses"
+      ],
+      "sources": [
+        {"name": "Indie Hackers", "url": "https://www.indiehackers.com/"}
+      ]
+    },
+    {
+      "section": "Stacks",
+      "headline": "The Sub-$50/Month SaaS Factory Stack",
+      "bullets": [
+        "Next.js + Tailwind on Vercel, Supabase or Neon for DB, Clerk or NextAuth for auth, Stripe for payments",
+        "Full solopreneur stack runs $3K-$12K/year (95-98% cost reduction vs hiring)",
+        "Boilerplate starters (ShipFast, Supastarter) + AI customization becoming the fastest path to market"
+      ],
+      "sources": [
+        {"name": "TLDL", "url": "https://www.tldl.io/resources/indie-hacker-saas-stack-2026"}
+      ]
+    }
+  ],
+  "what_to_watch": [
+    "Whether AI-built products face trust or quality perception issues as buyers become aware of how they're made",
+    "Emergence of 'SaaS factory' operators who systematically launch multiple products per quarter",
+    "Consolidation of rapid-prototyping tools (Bolt, Lovable, v0) vs IDE-native agents"
+  ],
+  "sources_consulted": "Indie Hackers, Latent Space, Y Combinator Blog, Pragmatic Engineer, TLDL, ProductHunt, Hacker News, and web search results"
+}

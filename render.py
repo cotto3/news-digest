@@ -122,7 +122,7 @@ def send_email(html: str, subject: str):
         sys.exit(1)
 
     to_email = os.environ.get("DIGEST_TO_EMAIL", "cotto3@icloud.com")
-    from_email = os.environ.get("DIGEST_FROM_EMAIL", "notifications@pageauditors.com")
+    from_email = os.environ.get("DIGEST_FROM_EMAIL", "digest@morningtide.news")
 
     payload = json.dumps({
         "from": from_email,

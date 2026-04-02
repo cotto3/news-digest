@@ -1,0 +1,81 @@
+{
+  "title": "Agentic Engineering Monthly",
+  "date_range": "March 2026",
+  "subject": "Agentic Engineering Monthly — March 2026",
+  "summary": [
+    "Claude Code adoption surpassed GitHub Copilot in Pragmatic Engineer's 2026 survey; 75% of engineers now use AI for half or more of their work",
+    "Multi-agent coordination emerged as the defining pattern: one agent codes, another tests, a third reviews",
+    "Context engineering (CLAUDE.md, AGENTS.md) shown to reduce agent runtime by 29%"
+  ],
+  "stories": [
+    {
+      "section": "Setups",
+      "headline": "What Top Engineers Are Actually Running",
+      "bullets": [
+        "Standard stack converging on Cursor for daily IDE work + Claude Code for hard problems (architecture, multi-file refactors, debugging)",
+        "Codex CLI gaining traction for cost-sensitive autonomous tasks; uses ~3x fewer tokens but scores lower on SWE-bench (64.7% vs 80.8%)",
+        "Devin shipping PRs autonomously at Goldman Sachs and Nubank; best for well-defined migrations and test writing at $500/month"
+      ],
+      "sources": [
+        {"name": "Pragmatic Engineer", "url": "https://newsletter.pragmaticengineer.com/p/ai-tooling-2026"},
+        {"name": "Anthropic", "url": "https://www.anthropic.com/engineering"}
+      ]
+    },
+    {
+      "section": "Setups",
+      "headline": "Kiro: Amazon's Spec-Driven IDE",
+      "bullets": [
+        "New IDE from AWS that generates requirements docs, design specs, and task breakdowns before writing code",
+        "Powered by Claude Sonnet; limited to 50 interactions/month on free tier",
+        "Best suited for teams building complex backend systems where upfront planning pays off"
+      ],
+      "sources": [
+        {"name": "Kiro", "url": "https://kiro.dev/"}
+      ]
+    },
+    {
+      "section": "Patterns",
+      "headline": "Multi-Agent Workflows Go Mainstream",
+      "bullets": [
+        "Anthropic's 2026 trends report identifies single-to-multi-agent shift as the year's defining pattern",
+        "Typical setup: one agent per feature, one for tests, one for review, all coordinated via shared context files",
+        "Task horizons expanding from minutes to days/weeks with agents maintaining coherent state across sessions"
+      ],
+      "sources": [
+        {"name": "Anthropic Trends Report", "url": "https://resources.anthropic.com/2026-agentic-coding-trends-report"}
+      ]
+    },
+    {
+      "section": "Patterns",
+      "headline": "Context Engineering Is the Highest-Leverage Skill",
+      "bullets": [
+        "Martin Fowler published detailed guide on context engineering for coding agents",
+        "AGENTS.md files reduce median agent runtime by 29% per Anthropic research",
+        "Key elements: path-based rules, subagent delegation, lifecycle hooks, skill systems"
+      ],
+      "sources": [
+        {"name": "Martin Fowler", "url": "https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html"},
+        {"name": "Anthropic", "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"}
+      ]
+    },
+    {
+      "section": "Releases",
+      "headline": "Notable Launches This Month",
+      "bullets": [
+        "Codex CLI hit 67K GitHub stars; OpenAI positioning it as the open-source alternative to Claude Code",
+        "Claude Code added worktree isolation and background agents for parallel development",
+        "GitHub Copilot shipped agent mode to free tier users"
+      ],
+      "sources": [
+        {"name": "GitHub", "url": "https://github.com/openai/codex"},
+        {"name": "Anthropic", "url": "https://code.claude.com/docs/en/best-practices"}
+      ]
+    }
+  ],
+  "what_to_watch": [
+    "Whether multi-agent setups converge on a standard coordination protocol or stay tool-specific",
+    "Devin's expansion beyond migrations into greenfield feature work",
+    "Claude Code's roadmap for persistent agent memory across sessions"
+  ],
+  "sources_consulted": "Pragmatic Engineer, Latent Space, Anthropic Engineering Blog, Simon Willison, Martin Fowler, HuggingFace Blog, DEV Community, and web search results"
+}
