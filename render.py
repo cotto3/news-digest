@@ -54,18 +54,27 @@ def render_stories(stories: list[dict]) -> str:
                 f'<strong>Framing Watch:</strong> {framing}</div>\n'
             )
 
-        sources = story.get("sources", [])
-        if sources:
-            links = " &middot; ".join(
-                f'<a href="{s["url"]}" style="color:#666;text-decoration:none;'
-                f'border-bottom:1px solid #ddd">{s["name"]}</a>'
-                for s in sources
-            )
-            html += f'<p style="margin:0;font-size:12px;color:#999">{links}</p>\n'
-
         html += "</div>\n"
 
     return html
+
+
+def render_sources_consulted(sources) -> str:
+    """Render sources_consulted as dot-separated linked HTML.
+
+    Accepts either a list of {"name", "url"} dicts (current schema) or a
+    plain string (legacy schema — returned as-is so digests in flight during
+    the schema migration keep rendering).
+    """
+    if isinstance(sources, str):
+        return sources
+    if not sources:
+        return ""
+    return " &middot; ".join(
+        f'<a href="{s["url"]}" style="color:#666;text-decoration:none;'
+        f'border-bottom:1px solid #ddd">{s["name"]}</a>'
+        for s in sources
+    )
 
 
 def render_summary(summary: list[str]) -> str:
@@ -111,7 +120,7 @@ def render(template_name: str, data: dict) -> str:
         summary=render_summary(data.get("summary", [])),
         stories=render_stories(data.get("stories", [])),
         extra_sections=render_extra_sections(data),
-        sources_consulted=data.get("sources_consulted", ""),
+        sources_consulted=render_sources_consulted(data.get("sources_consulted", "")),
     )
 
 

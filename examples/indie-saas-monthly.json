@@ -15,10 +15,6 @@
         "Standard AI-first flow: idea validation via LLM research, spec writing, agent-driven development, automated testing, deploy to Vercel",
         "Founders using Claude Code + Cursor combo: Cursor for daily edits, Claude Code for architecture and multi-file scaffolding",
         "Bolt.new and Lovable gaining traction for generating full-stack prototypes from prompts in under an hour"
-      ],
-      "sources": [
-        {"name": "Indie Hackers", "url": "https://www.indiehackers.com/"},
-        {"name": "Latent Space", "url": "https://www.latent.space/"}
       ]
     },
     {
@@ -28,10 +24,6 @@
         "Top builders write detailed requirements and architecture docs (CLAUDE.md, specs) before touching code",
         "Amazon's Kiro IDE formalizes this: generates requirements, design specs, and task breakdowns as a first step",
         "Pattern works because agents perform dramatically better with clear constraints and context"
-      ],
-      "sources": [
-        {"name": "Kiro", "url": "https://kiro.dev/"},
-        {"name": "Anthropic", "url": "https://www.anthropic.com/engineering"}
       ]
     },
     {
@@ -41,9 +33,6 @@
         "Maor Shlomo built Base44 (no-code platform) entirely solo using AI coding tools",
         "Reached 250K users before Wix acquired it for $80M cash",
         "No funding, no team, no traditional marketing; product-led growth only"
-      ],
-      "sources": [
-        {"name": "TechCrunch", "url": "https://techcrunch.com/"}
       ]
     },
     {
@@ -53,9 +42,6 @@
         "Danny Postma running HeadshotPro solo at $300K MRR using AI for product development and operations",
         "Sarah Chen launched AI design agency, hit $420K ARR within 8 months",
         "Operating margins of 60-80% vs 10-20% for traditionally staffed SaaS businesses"
-      ],
-      "sources": [
-        {"name": "Indie Hackers", "url": "https://www.indiehackers.com/"}
       ]
     },
     {
@@ -65,9 +51,6 @@
         "Next.js + Tailwind on Vercel, Supabase or Neon for DB, Clerk or NextAuth for auth, Stripe for payments",
         "Full solopreneur stack runs $3K-$12K/year (95-98% cost reduction vs hiring)",
         "Boilerplate starters (ShipFast, Supastarter) + AI customization becoming the fastest path to market"
-      ],
-      "sources": [
-        {"name": "TLDL", "url": "https://www.tldl.io/resources/indie-hacker-saas-stack-2026"}
       ]
     }
   ],
@@ -76,5 +59,14 @@
     "Emergence of 'SaaS factory' operators who systematically launch multiple products per quarter",
     "Consolidation of rapid-prototyping tools (Bolt, Lovable, v0) vs IDE-native agents"
   ],
-  "sources_consulted": "Indie Hackers, Latent Space, Y Combinator Blog, Pragmatic Engineer, TLDL, ProductHunt, Hacker News, and web search results"
+  "sources_consulted": [
+    {"name": "Indie Hackers", "url": "https://www.indiehackers.com/"},
+    {"name": "Latent Space", "url": "https://www.latent.space/"},
+    {"name": "Y Combinator Blog", "url": "https://www.ycombinator.com/blog"},
+    {"name": "Pragmatic Engineer", "url": "https://newsletter.pragmaticengineer.com/"},
+    {"name": "TLDL", "url": "https://www.tldl.io/resources/indie-hacker-saas-stack-2026"},
+    {"name": "Product Hunt", "url": "https://www.producthunt.com/"},
+    {"name": "Hacker News", "url": "https://news.ycombinator.com/"},
+    {"name": "TechCrunch", "url": "https://techcrunch.com/"}
+  ]
 }

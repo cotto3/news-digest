@@ -49,22 +49,29 @@ Scheduled trigger (Anthropic cloud)
       "section": "string",
       "headline": "string",
       "bullets": ["strings"],
-      "sources": [{"name": "string", "url": "string"}],
       "framing_watch": "optional string"
     }
   ],
   "this_week": ["optional, NYC only"],
   "what_to_watch": ["optional developing stories"],
-  "sources_consulted": "string"
+  "sources_consulted": [{"name": "string", "url": "string"}]
 }
 ```
+
+**Sources rule:** there is a single `sources_consulted` list at the footer — per-story source lists were removed because they were incomplete in practice (outlets named in `framing_watch` for coverage comparison were often missing from a story's own `sources`). Include *every* outlet that influenced the digest in any way, including ones referenced for framing/comparison. `render.py` also accepts a legacy plain string here for backward compatibility during schema migration, but new data should always be a list.
 
 ## Environment
 
 - `RESEND_API_KEY` — Required for `--send`. Already configured in the Anthropic cloud default environment.
-- `DIGEST_TO_EMAIL` — Recipient (default: `cotto3@icloud.com`)
+- `DIGEST_TO_EMAIL` — Recipient(s). `render.py` supports a comma-separated list.
 - `DIGEST_FROM_EMAIL` — Sender (default: `digest@morningtide.news`)
 
 ## Remote Execution
 
 Triggers are managed via `RemoteTrigger` API (or https://claude.ai/code/scheduled). The agents run in Anthropic's cloud with a git checkout of this repo. Allowed tools: `Bash`, `Write`, `WebSearch`, `WebFetch`.
+
+### Recipient management (important)
+
+**Recipient lists and the Resend API key currently live inside each trigger's prompt blob**, not in the repo or the trigger's environment variables. Each trigger's Phase "Render and send" step inlines `export DIGEST_TO_EMAIL="a@x,b@y,..."` and `export RESEND_API_KEY=...` into a bash block. To add/remove a recipient you must `RemoteTrigger get` the trigger, edit the `DIGEST_TO_EMAIL` line inside `job_config.ccr.events[0].data.message.content`, and `RemoteTrigger update` with the full job_config. The "Weekly Global + NYC" trigger contains **two** `DIGEST_TO_EMAIL` exports — one per digest — so scope changes carefully.
+
+Cleaner pattern (not yet implemented): move `RESEND_API_KEY` and per-digest `DIGEST_TO_EMAIL` into trigger env vars so recipient edits don't require rewriting the prompt and the API key stops living in trigger history.

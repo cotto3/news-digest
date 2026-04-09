@@ -18,11 +18,6 @@
         "10 US troops injured in Iranian strike on Prince Sultan Air Base in Saudi Arabia",
         "G7 foreign ministers agreed to protect Strait of Hormuz passage if war ends"
       ],
-      "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world"},
-        {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"},
-        {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"}
-      ],
       "framing_watch": "RT emphasizes US aggression and civilian casualties; BBC and DW focus on diplomatic efforts and military operations"
     },
     {
@@ -31,10 +26,6 @@
       "bullets": [
         "At least 84 killed in flash floods across Kenya; 20 killed in landslides in Tanzania's Mbeya Region",
         "Somalia faces acute food insecurity with 6.5 million affected as drought and conflict worsen"
-      ],
-      "sources": [
-        {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"},
-        {"name": "Africanews", "url": "https://www.africanews.com/"}
       ]
     },
     {
@@ -43,10 +34,6 @@
       "bullets": [
         "C-130 transport plane crashed in Puerto Leguízamo, killing at least 66 of 125 aboard",
         "One of the deadliest military aviation disasters in Latin America in recent years"
-      ],
-      "sources": [
-        {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"},
-        {"name": "CNN", "url": "https://www.cnn.com/world/americas"}
       ]
     },
     {
@@ -55,11 +42,6 @@
       "bullets": [
         "House Republicans rejected Senate deal to fund DHS; TSA staffing shortages causing extended airport lines",
         "Senators recessed for two weeks with no end in sight"
-      ],
-      "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world"},
-        {"name": "CNN", "url": "https://www.cnn.com/us"},
-        {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"}
       ]
     },
     {
@@ -69,10 +51,6 @@
         "European Commission urged EU countries to start gas filling season early",
         "Eurogroup warned conflict effects now passing through to real economy",
         "Germany's Chancellor Merz questioned coal reform timeline given energy instability"
-      ],
-      "sources": [
-        {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"},
-        {"name": "EU Commission", "url": "https://energy.ec.europa.eu/"}
       ]
     },
     {
@@ -80,10 +58,6 @@
       "headline": "Sarah Mullally Becomes First Female Archbishop of Canterbury",
       "bullets": [
         "Enthroned on March 27, succeeding Justin Welby who resigned over safeguarding failures"
-      ],
-      "sources": [
-        {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world"}
       ]
     },
     {
@@ -92,11 +66,6 @@
       "bullets": [
         "Rapper-turned-politician Balendra Shah sworn in as PM after landslide election victory",
         "Former PM KP Sharma Oli arrested over deadly crackdown that killed 70+ protesters"
-      ],
-      "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world"},
-        {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"},
-        {"name": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"}
       ]
     },
     {
@@ -106,11 +75,6 @@
         "Dow fell ~800 points, entering correction; S&P 500 posted fifth straight losing week",
         "OECD warned Middle East conflict is 'testing resilience of global economy'",
         "Bank of England and Federal Reserve both held rates steady, citing energy-driven inflation"
-      ],
-      "sources": [
-        {"name": "CNBC", "url": "https://www.cnbc.com/world-economy/"},
-        {"name": "OECD", "url": "https://www.oecd.org/"},
-        {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"}
       ]
     },
     {
@@ -120,10 +84,6 @@
         "AI-generated fake X-rays now convincing enough to fool radiologists",
         "New neural implant small enough to rest on a grain of salt can wirelessly transmit brain activity for over a year",
         "Australian scientists demonstrated a prototype quantum battery"
-      ],
-      "sources": [
-        {"name": "SciTechDaily", "url": "https://scitechdaily.com/"},
-        {"name": "ScienceDaily", "url": "https://www.sciencedaily.com/"}
       ]
     }
   ],
@@ -132,5 +92,16 @@
     "US DHS shutdown with senators on recess for two weeks",
     "Oil price trajectory as IEA considers further strategic reserve releases"
   ],
-  "sources_consulted": "Wikipedia Current Events, BBC, DW, Al Jazeera, SCMP, CNN, NPR, CNBC, OECD, Africanews, SciTechDaily, and web search results"
+  "sources_consulted": [
+    {"name": "Wikipedia Current Events", "url": "https://en.wikipedia.org/wiki/Portal:Current_events"},
+    {"name": "BBC", "url": "https://www.bbc.com/news/world"},
+    {"name": "DW", "url": "https://www.dw.com/en/top-stories/s-9097"},
+    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/"},
+    {"name": "RT", "url": "https://www.rt.com/"},
+    {"name": "CNN", "url": "https://www.cnn.com/world"},
+    {"name": "CNBC", "url": "https://www.cnbc.com/world-economy/"},
+    {"name": "OECD", "url": "https://www.oecd.org/"},
+    {"name": "Africanews", "url": "https://www.africanews.com/"},
+    {"name": "SciTechDaily", "url": "https://scitechdaily.com/"}
+  ]
 }
