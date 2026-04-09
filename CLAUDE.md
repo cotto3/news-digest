@@ -75,3 +75,13 @@ Triggers are managed via `RemoteTrigger` API (or https://claude.ai/code/schedule
 **Recipient lists and the Resend API key currently live inside each trigger's prompt blob**, not in the repo or the trigger's environment variables. Each trigger's Phase "Render and send" step inlines `export DIGEST_TO_EMAIL="a@x,b@y,..."` and `export RESEND_API_KEY=...` into a bash block. To add/remove a recipient you must `RemoteTrigger get` the trigger, edit the `DIGEST_TO_EMAIL` line inside `job_config.ccr.events[0].data.message.content`, and `RemoteTrigger update` with the full job_config. The "Weekly Global + NYC" trigger contains **two** `DIGEST_TO_EMAIL` exports — one per digest — so scope changes carefully.
 
 Cleaner pattern (not yet implemented): move `RESEND_API_KEY` and per-digest `DIGEST_TO_EMAIL` into trigger env vars so recipient edits don't require rewriting the prompt and the API key stops living in trigger history.
+
+### Editing trigger prompts (pattern that actually works)
+
+Each trigger's prompt blob is 3-7KB and contains JSON examples with escaped quotes and embedded code fences. Do **not** hand-escape this inside a `RemoteTrigger update` call — one missed `\"` corrupts the trigger. Instead:
+
+1. Write a small Python helper (`/tmp/build_trigger_updates.py`) that defines each new content string as a raw triple-quoted literal and serializes the full `job_config` body to `/tmp/update_*.json`. Preserve `environment_id`, `session_context`, event `uuid`, and the API key line from the current `RemoteTrigger get`.
+2. For each trigger, run `python3 -c "import json; print(json.dumps(json.load(open('/tmp/update_X.json')), ensure_ascii=False))"` in Bash. The Bash tool output gives you the compact, correctly-escaped JSON.
+3. Paste that compact JSON directly into the `body` parameter of a `RemoteTrigger update` call. Verify via `RemoteTrigger list` or `get` afterwards.
+
+This was the only reliable way to do schema migrations on the triggers; inline hand-escaping kept breaking.
