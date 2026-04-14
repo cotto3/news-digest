@@ -62,6 +62,8 @@ Scheduled trigger (Anthropic cloud)
 
 **`render_sources_consulted` is defensive on purpose.** The research agent (Sonnet 4.6) sometimes serializes `sources_consulted` as a JSON-stringified array instead of a real list — that would previously leak literal `[{"name":...}]` text into the email footer. `render.py` now (a) `json.loads` any string input and retries, and (b) renders any list item that isn't a `{name,url}` dict as a plain-text `<span>` instead of skipping or crashing. Keep this recovery path — the agents are non-deterministic and this is the only guardrail between bad JSON and a visibly broken email.
 
+**Tests.** `python3 -m unittest tests.test_render -v` from the repo root. Add regression cases to `tests/test_render.py` — do not write one-off scripts in `/tmp/`.
+
 ## Environment
 
 - `RESEND_API_KEY` — Required for `--send`. Already configured in the Anthropic cloud default environment.

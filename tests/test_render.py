@@ -30,6 +30,41 @@ class RenderSourcesConsultedTests(unittest.TestCase):
         legacy = "Wikipedia Current Events, BBC, DW, Al Jazeera"
         self.assertEqual(render.render_sources_consulted(legacy), legacy)
 
+    def test_stringified_json_list_is_parsed_and_rendered_as_links(self):
+        # Regression: the research agent sometimes serializes sources_consulted
+        # as a JSON string instead of a list. It used to leak literal brackets
+        # into the email footer; now it should parse and render like a list.
+        import json
+        stringified = json.dumps([
+            {"name": "BBC", "url": "https://www.bbc.com/news"},
+            {"name": "CNN", "url": "https://www.cnn.com/world"},
+        ])
+        html = render.render_sources_consulted(stringified)
+
+        self.assertIn('href="https://www.bbc.com/news"', html)
+        self.assertIn(">BBC</a>", html)
+        self.assertIn('href="https://www.cnn.com/world"', html)
+        self.assertNotIn("[", html)
+        self.assertNotIn("{", html)
+
+    def test_list_of_plain_strings_renders_as_spans_without_crashing(self):
+        html = render.render_sources_consulted(["BBC", "CNN", "DW"])
+        self.assertIn(">BBC</span>", html)
+        self.assertIn(">CNN</span>", html)
+        self.assertIn("&middot;", html)
+        self.assertNotIn("<a ", html)
+
+    def test_malformed_items_fall_back_to_plain_text(self):
+        sources = [
+            {"name": "BBC", "url": "https://www.bbc.com/news"},
+            {"missing": "url_key"},
+            "CNN",
+        ]
+        html = render.render_sources_consulted(sources)
+        self.assertIn(">BBC</a>", html)
+        self.assertIn(">CNN</span>", html)
+        self.assertNotIn("missing", html)
+
 
 class RenderStoriesSourcesRemovedTests(unittest.TestCase):
     def test_per_story_source_links_not_rendered(self):
