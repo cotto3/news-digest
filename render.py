@@ -62,19 +62,28 @@ def render_stories(stories: list[dict]) -> str:
 def render_sources_consulted(sources) -> str:
     """Render sources_consulted as dot-separated linked HTML.
 
-    Accepts either a list of {"name", "url"} dicts (current schema) or a
-    plain string (legacy schema — returned as-is so digests in flight during
-    the schema migration keep rendering).
+    Expected shape is a list of {"name", "url"} dicts. The research agent
+    occasionally serializes the list as a JSON string instead — try to
+    recover by parsing. Items that aren't {name,url} dicts fall back to a
+    plain-text span so the footer never surfaces raw brackets or braces.
     """
     if isinstance(sources, str):
-        return sources
+        try:
+            sources = json.loads(sources)
+        except (json.JSONDecodeError, ValueError):
+            return sources
     if not sources:
         return ""
-    return " &middot; ".join(
-        f'<a href="{s["url"]}" style="color:#666;text-decoration:none;'
-        f'border-bottom:1px solid #ddd">{s["name"]}</a>'
-        for s in sources
-    )
+    parts = []
+    for s in sources:
+        if isinstance(s, dict) and "name" in s and "url" in s:
+            parts.append(
+                f'<a href="{s["url"]}" style="color:#666;text-decoration:none;'
+                f'border-bottom:1px solid #ddd">{s["name"]}</a>'
+            )
+        elif isinstance(s, str):
+            parts.append(f'<span style="color:#666">{s}</span>')
+    return " &middot; ".join(parts)
 
 
 def render_summary(summary: list[str]) -> str:
