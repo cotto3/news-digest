@@ -19,8 +19,8 @@ Scheduled trigger (Anthropic cloud)
 | Iran Conflict Daily | `iran-daily` | Daily 12:00 UTC (8am ET) | Military, Diplomatic, Humanitarian, Economic |
 | Global Weekly | `global-weekly` | Sundays 12:00 UTC (8am ET) | Americas, Europe, Asia-Pacific, Middle East & Africa, Economy & Markets, Science & Technology |
 | NYC Weekly | `nyc-weekly` | Sundays 12:00 UTC (8am ET) | City Hall & Politics, Transit & Infrastructure, Housing & Real Estate, Public Safety, Culture/Food/Events, Business & Economy, Education |
-| Agentic Engineering Monthly | `agentic-monthly` | 1st of month 13:00 UTC (9am ET) | Setups, Patterns, Releases |
-| Indie SaaS Monthly | `indie-saas-monthly` | 1st of month 13:00 UTC (9am ET) | Factory Flows, Launches, Stacks |
+| Agentic Engineering Weekly | `agentic-weekly` | Sundays 12:00 UTC (8am ET) | Setups, Patterns, Releases |
+| Indie SaaS Weekly | `indie-saas-weekly` | Sundays 12:00 UTC (8am ET) | Factory Flows, Launches, Stacks |
 
 ## Remote Triggers (3-slot limit)
 
@@ -28,7 +28,7 @@ Scheduled trigger (Anthropic cloud)
 |---------|-----|-------|
 | Daily Iran War Update | `trig_016FofHKZEw7RrU7Trh5CQdY` | Iran daily |
 | Weekly Global + NYC | `trig_018ygtozXBKo5TANpFuZLSxG` | Global weekly + NYC weekly |
-| Monthly Agentic + Indie SaaS | `trig_01VWaVE6Ab2tNTb6hUtCTKty` | Agentic monthly + Indie SaaS monthly |
+| Weekly Agentic + Indie SaaS | `trig_01VWaVE6Ab2tNTb6hUtCTKty` | Agentic weekly + Indie SaaS weekly |
 
 ## Key Files
 
