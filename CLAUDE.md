@@ -70,6 +70,13 @@ Scheduled trigger (Anthropic cloud)
 - `DIGEST_TO_EMAIL` — Recipient(s). `render.py` supports a comma-separated list.
 - `DIGEST_FROM_EMAIL` — Sender (default: `digest@morningtide.news`)
 
+## Email Accounts & DNS
+
+| Service | Auth | Purpose & Notes |
+|---------|------|-----------------|
+| Resend | `crotto100@hotmail.com` | Outbound digest sends from `digest@morningtide.news`. Domain `morningtide.news` verified. **Separate Resend account** from PageAudit/MailScore — Resend free tier allows only 1 domain per account. API key embedded in trigger prompts (`re_3BPhVaDS_*`). |
+| ImprovMX | Magic-link login as `cotto3@icloud.com` | Inbound: catch-all `*@morningtide.news` → `cotto3@icloud.com`. Free tier. MX records (`mx1/mx2.improvmx.com`) added to Squarespace DNS 2026-05-02. Replies to digest emails land in the iCloud inbox. |
+
 ## Remote Execution
 
 Triggers are managed via `RemoteTrigger` API (or https://claude.ai/code/scheduled). The agents run in Anthropic's cloud with a git checkout of this repo. Allowed tools: `Bash`, `Write`, `WebSearch`, `WebFetch`.
